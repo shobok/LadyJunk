@@ -173,3 +173,6 @@ section {
 .btn-social:hover {
     color: white;
 }
+.iframe-music {
+    width: 100%;
+}
