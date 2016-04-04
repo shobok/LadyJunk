@@ -179,3 +179,8 @@ section {
     overflow: hidden;
     border: 0;
 }
+.iframe-video {
+    border: 0;
+    width: 640px;
+    height: 390px;
+}
