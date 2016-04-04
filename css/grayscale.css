@@ -175,4 +175,5 @@ section {
 }
 .iframe-music {
     width: 100%;
+    overflow: hidden;
 }
