@@ -27,3 +27,6 @@ $('.navbar-collapse ul li a').click(function() {
   }
 });
 
+$(document).ready(function() {
+    $(".fancybox").fancybox();
+});

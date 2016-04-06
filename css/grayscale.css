@@ -5,7 +5,6 @@ body {
     color: #fff;
     background-color: #000;
 }
-
 .navbar-custom {
     margin-bottom: 0;
     border-bottom: 1px solid rgba(255,255,255,.3);
@@ -42,23 +41,6 @@ body {
 .navbar-custom .nav li.active a:hover {
     color: #fff;
 }
-@media(min-width:768px) {
-    .navbar-custom {
-        padding: 20px 0;
-        border-bottom: 0;
-        letter-spacing: 1px;
-        background: 0 0;
-        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        transition: background .5s ease-in-out,padding .5s ease-in-out;
-    }
-    .navbar-custom.top-nav-collapse {
-        padding: 0;
-        border-bottom: 1px solid rgba(255,255,255,.3);
-        background: #000;
-        height: 5em;
-    }
-}
 .intro {
     width: 100%;
     height: auto;
@@ -70,12 +52,6 @@ body {
     -o-background-size: cover;
 
 }
-@media(min-width:768px) {
-    .intro {
-        height: 100%;
-        padding: 0;
-    }
-}
 h2 {
     margin: 0 0 35px;
     font-weight: 700;
@@ -83,16 +59,9 @@ h2 {
     color: #2971C7;
 }
 p {
-    margin: 0 0 25px;
-    font-size: 12px;
+    margin: 0 0 35px;
+    font-size: 14px;
     line-height: 1.5;
-}
-@media(min-width:768px) {
-    p {
-        margin: 0 0 35px;
-        font-size: 16px;
-        line-height: 1.6;
-    }
 }
 a {
     color: #2971C7;
@@ -130,9 +99,6 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: rgba(255,255,255,.2);
 }
-
-/*My code*/
-
 .img-describe {
     width: 90%;
 }
@@ -183,4 +149,37 @@ section {
     border: 0;
     width: 640px;
     height: 390px;
+}
+.gallery img {
+    padding: 1px;
+    background-color: #2971C7;
+}
+.block-article {
+    float: left;
+}
+@media screen and (max-width: 768px) {
+    .intro {
+        height: 100%;
+        padding: 0;
+    }
+     p {
+        margin: 0 0 35px;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    .navbar-custom {
+        padding: 20px 0;
+        border-bottom: 0;
+        letter-spacing: 1px;
+        background: 0 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+    .navbar-custom.top-nav-collapse {
+        padding: 0;
+        border-bottom: 1px solid rgba(255,255,255,.3);
+        background: #000;
+        height: 5em;
+    }
 }

@@ -16,6 +16,8 @@
     <link href="font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="favicon.ico" rel="icon">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="source/jquery.fancybox.css" type="text/css" media="screen" />
+    <link href="css/jcarousel.responsive.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -94,12 +96,12 @@
 
     <section id="about" class="container">
         <div class="row">
-            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+            <div class="col-md-8 col-sm-8 block-article">
                <img src="img/photo-group.png" alt="photo-group" class="img-describe">
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <div class="col-md-4 col-sm-4 block-article">
                 <h2>Про гурт</h2>
-                <p>Група «Леді Джанк» заснована в Києві в 2014 році і складається з                         чотирьох осіб: <br>
+                <p>Група «Леді Джанк» заснована в Києві в 2014 році і складається з чотирьох осіб: <br>
                 <br>
                 <a href="https://vk.com/thehusak" target="_blank">Сергій Гусак - вокал</a><br>
                 Ілля Случанко - гітара <br>
@@ -109,30 +111,28 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <div class="col-md-6 col-sm-6 block-article">
                 <p class="article">Під жіночою назвою ховається стовідсотково чоловічий колектив, чий музичний стиль побудованно на вмінні грати на контрасті: від потайливих хлопців не чекаєш відвертих текстів, та до того ж професія лікаря вимагає від вокаліста стриманості і відстороненості, в той час як музика - щирої емоційності.<br>
 Так, між жіночим і чоловічим, холодом і пристрастю, позитивною «леді» і негативною «джанк» виникає потужний електричний заряд. Пронизливі гітарні рифи, вокал, що чіпляє, та чуттєві українські тексти гарантують слухачеві подвійну дозу адреналіну. <br>Ці хлопці співають про те, про що чоловіки соромляться говорити. Яскравий голос, прониклива лірика і владна привабливість музикантів змушують тремтіти сотні жіночих колін. Так, це "розв'язний неосоул".
                 </p>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <div class="col-md-6 col-sm-6 block-article">
                 <p class="article">Група встигла показати себе на Фестивалі вуличної музики, Арт-пікніку Слави Фролової (2014), Kyiv Open Air 2015, Gogolfest 2014 та 2015, Old Car Fest, конкурсі Rock the Nation, Global Battle Of the Bands 2016, в ефірі Радіо Аристократи та багатьох київських муз.майданчиках.<br>
 У 2015 році у групи вийшло два ЕР: «Буде, що сказати» і «# 2», на підході третій альбом. 20 лютого 2016 відбулась презентація дебютного кліпу на пісню "Буде що сказати".
                 </p>
             </div>
         </div>
-        <div class="text-center">
-            <ul class="gallery list-inline">
-                <li><a href="#"><i class="fa fa-chevron-left fa-2x"></i></a></li>
-                <li><img src="img/photo-group-mini.jpg" alt=""></li>
-                <li><img src="img/photo-group-mini.jpg" alt=""></li>
-                <li><img src="img/photo-group-mini.jpg" alt=""></li>
-                <li><img src="img/photo-group-mini.jpg" alt=""></li>
-                <li><img src="img/photo-group-mini.jpg" alt=""></li>
-                <li><img src="img/photo-group-mini.jpg" alt=""></li>
-                <li><img src="img/photo-group-mini.jpg" alt=""></li>
-                <li><img src="img/photo-group-mini.jpg" alt=""></li>
-                <li><a href="#"><i class="fa fa-chevron-right fa-2x"></i></a></li>
-            </ul>
+        <div class="jcarousel-wrapper">
+            <div class="jcarousel">
+                <ul>
+                    <li><a class="fancybox" rel="group" href="img/photo-group.jpg"><img src="img/photo-group.jpg" alt=""></a></li>
+                    <li><a class="fancybox" rel="group" href="img/photo-group.jpg"><img src="img/photo-group.jpg" alt=""></a></li>
+                    <li><a class="fancybox" rel="group" href="img/photo-group.jpg"><img src="img/photo-group.jpg" alt=""></a></li>
+                    <li><a class="fancybox" rel="group" href="img/photo-group.jpg"><img src="img/photo-group.jpg" alt=""></a></li>
+                </ul>
+            </div>
+            <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+            <a href="#" class="jcarousel-control-next">&rsaquo;</a>
         </div>
     </section>
 
@@ -153,7 +153,7 @@
     <section id="clip" class="container content-section backround-lines">
         <div class="row text-center">
             <h2>Кліпи</h2>
-            <div class="col-lg-offset-4 col-lg-4 col-lg-offset-4">
+            <div class="col-md-offset-4 col-md-4 col-md-offset-4 col-sm-offset-4 col-sm-4 col-sm-offset-4">
                 <div class="embed-responsive embed-responsive-16by9">
                     <iframe id="player" class="iframe-video" src="http://www.youtube.com/embed/5xBfAVpIXvw?enablejsapi=1&origin"></iframe>
                 </div>
@@ -196,5 +196,9 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/grayscale.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="source/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript" src="js/jcarousel.responsive.js"></script>
 </body>
 </html>
