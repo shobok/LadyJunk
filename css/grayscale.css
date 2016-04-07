@@ -24,7 +24,7 @@ body {
 }
 .navbar-custom .nav li a:hover {
     outline: 0;
-    color: rgba(255,255,255,.8);
+    color: #2971C7;
     background-color: transparent;
 }
 .navbar-custom .nav li a:focus,
@@ -147,6 +147,9 @@ section {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+}
+#concert {
+    margin-top: 9em;
 }
 .article {
     padding: 1.5em 1.5em;
