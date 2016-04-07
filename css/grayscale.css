@@ -189,3 +189,6 @@ section {
 .block-article {
     float: left;
 }
+.video-play {
+    margin: 1em;
+}
