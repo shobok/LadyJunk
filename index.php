@@ -78,28 +78,32 @@
 
     <section id="concert" class="container content-section backround-lines">
         <div class="row text-center wow zoomIn">
-            <h2>Найближчі концерти</h2>
-            <p>Клуб «Пікассо» <br>
-                м. Львів <br>
-                вул. Зелена, 75 <br>
-                початок 19.00 <br>
-            <a href="#" target="_blank" class="btn btn-ticket" role="button">придбати квиток</a>
-            </p>
-            <p>Нічний клуб «Fashion»<br>
-                м. Львів <br>
-                пр. Свобиди, 15 <br>
-                початок 20.00 <br>
-            <a href="#" target="_blank" class="btn btn-ticket" role="button">придбати квиток</a>
-            </p>
+            <div class="col-md-offset-4 col-md-4 col-md-offset-4">
+                <h2>Концерти</h2>
+                <?php
+                    $split_by_tag='концерт';
+                    $wall = file_get_contents("https://api.vk.com/method/wall.search?                v=5.5&filter=owner&domain=ladyjunk&count=2&query=".$split_by_tag);
+                    $wall = json_decode($wall);
+                    $wall = $wall->response->items;
+                    for ($i = 0; $i < count($wall); $i++) {
+                        $direct_link_to_wall_msg = 'https://vk.com/wall'.$wall[$i]->from_id.'_'.$wall[$i]->id;
+                        echo '<p>';
+                        echo $wall[$i]->text;
+                        echo '<br>';
+                        echo '<a class="btn btn-ticket" role="button" href="'.$direct_link_to_wall_msg.'" target="_blank">детальніше</a>';
+                        echo '</p>';
+                    }
+                ?>
+            </div>
         </div>
     </section>
 
     <section id="about" class="container">
         <div class="row wow fadeInUp">
-            <div class="col-lg-8 col-md-8 col-sm-8 block-article">
+            <div class="col-md-8 col-sm-8 block-article">
                <img src="img/photo-group.jpg" alt="photo-group" class="img-describe">
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 block-article">
+            <div class="col-md-4 col-sm-4 block-article">
                 <h2>Про гурт</h2>
                 <p>Група «Леді Джанк» заснована в Києві в 2014 році і складається з чотирьох осіб: <br>
                 <br>
@@ -111,12 +115,12 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-6 block-article">
+            <div class="col-md-6 col-sm-6 block-article">
                 <p class="article wow fadeInLeft">Під жіночою назвою ховається стовідсотково чоловічий колектив, чий музичний стиль побудованно на вмінні грати на контрасті: від потайливих хлопців не чекаєш відвертих текстів, та до того ж професія лікаря вимагає від вокаліста стриманості і відстороненості, в той час як музика - щирої емоційності.<br>
 Так, між жіночим і чоловічим, холодом і пристрастю, позитивною «леді» і негативною «джанк» виникає потужний електричний заряд. Пронизливі гітарні рифи, вокал, що чіпляє, та чуттєві українські тексти гарантують слухачеві подвійну дозу адреналіну. <br>Ці хлопці співають про те, про що чоловіки соромляться говорити. Яскравий голос, прониклива лірика і владна привабливість музикантів змушують тремтіти сотні жіночих колін. Так, це "розв'язний неосоул".
                 </p>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 block-article">
+            <div class="col-md-6 col-sm-6 block-article">
                 <p class="article wow fadeInRight">Група встигла показати себе на Фестивалі вуличної музики, Арт-пікніку Слави Фролової (2014), Kyiv Open Air 2015, Gogolfest 2014 та 2015, Old Car Fest, конкурсі Rock the Nation, Global Battle Of the Bands 2016, в ефірі Радіо Аристократи та багатьох київських муз.майданчиках.<br>
 У 2015 році у групи вийшло два ЕР: «Буде, що сказати» і «# 2», на підході третій альбом. 20 лютого 2016 відбулась презентація дебютного кліпу на пісню "Буде що сказати".
                 </p>
@@ -148,7 +152,7 @@
         <div class="row text-center wow zoomIn">
             <h2>Музика</h2>
             <div class="col-md-6 col-md-offset-3">
-                <iframe class="iframe-music" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/214654639&amp;color=2971C7&amp;inverse=false&amp;auto_play=false&amp;show_user=true"></iframe>
+                 <iframe class="iframe-music" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/214654639&amp;color=2971C7&amp;inverse=false&amp;auto_play=false&amp;show_user=true"></iframe>
                 <iframe class="iframe-music" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/214654510&amp;color=2971C7&amp;inverse=false&amp;auto_play=false&amp;show_user=true"></iframe>
                 <iframe class="iframe-music" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/214654479&amp;color=2971C7&amp;inverse=false&amp;auto_play=false&amp;show_user=true"></iframe>
                 <iframe class="iframe-music" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/214654444&amp;color=2971C7&amp;inverse=false&amp;auto_play=false&amp;show_user=true"></iframe>
@@ -165,7 +169,7 @@
             <h2>Кліпи</h2>
             <div class="col-md-offset-2 col-md-8 col-md-offset-2 col-sm-offset-2 col-sm-8 col-sm-offset-2">
                 <div class="embed-responsive embed-responsive-16by9 video-play">
-                    <iframe id="player" class="iframe-video" src="http://www.youtube.com/embed/5xBfAVpIXvw?enablejsapi=1&origin"></iframe>
+                    <iframe id="player" class="iframe-video" src="https://www.youtube.com/embed/5xBfAVpIXvw"></iframe>
                 </div>
                 <div class="embed-responsive embed-responsive-16by9 video-play">
                     <iframe id="player" class="iframe-video" src="https://www.youtube.com/embed/PK9RItDYtUk"></iframe>
@@ -174,7 +178,7 @@
         </div>
     </section>
 
-    <section id="contact" class="container content-section backround-lines">
+    <section id="contact" class="container content-section">
         <div class="row text-center wow fadeInUp">
            <h2>Контакти</h2>
            <br>
