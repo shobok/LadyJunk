@@ -185,6 +185,7 @@ section {
 }
 .block-article {
     float: left;
+    margin-bottom: 10px;
 }
 .video-play {
     margin: 1em;
